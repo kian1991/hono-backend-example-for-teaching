@@ -16,4 +16,7 @@ app.get('/', (c) => {
   return c.text(`Hello from ${os.hostname()}!`);
 });
 
-export default app;
+export default {
+  fetch: app.fetch,
+  port: 8080,
+};
